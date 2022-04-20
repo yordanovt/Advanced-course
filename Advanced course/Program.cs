@@ -17,8 +17,9 @@ namespace Advanced_course
             foreach (var item in input)
             {
                 demo.Push(item);
-                
+                Console.WriteLine(item);
             }
+            
             while (demo.Count!=0)
             {
                 Console.Write(demo.Pop());
