@@ -11,33 +11,28 @@ namespace Advanced_course
     {
         static void Main(string[] args)
         {
-            var input  = Console.ReadLine();
-            var demoStack = new Stack<char>();
-            var demoQueue = new Queue<char>();
-
-            foreach (var item in input)
+            var input = Console.ReadLine();
+            var command = Console.ReadLine();
+            while (command != "end")
             {
-                demoStack.Push(item);
-                Console.WriteLine(item);
-            }
-            while (demoStack.Count != 0)
-            {
-                Console.Write(demoStack.Pop());
-            }
-            Console.WriteLine();
-            foreach (var item in input)
-            {
-                demoQueue.Enqueue(item);
-                Console.WriteLine(item);
-            }
+                if (command == "Stack")
+                {
+                    Stack.methodStack(input);
+                    command = Console.ReadLine();
+                }
+                else if (command == "Queue")
+                {
+                    Queue.methodQueue(input);
+                    command = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("wrong command ! Choose between \"Stack\" or \"Queue\"");
+                    command = Console.ReadLine();
 
-            while (demoQueue.Count != 0)
-            {
-                Console.Write(demoQueue.Dequeue());
+                }
             }
-            Console.WriteLine();
-
-
         }
     }
+
 }
