@@ -12,15 +12,15 @@ namespace Advanced_course
         static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var command = Console.ReadLine();
+            var command = (Console.ReadLine());
             while (command != "end")
             {
-                if (command == "Stack")
+                if (command.ToLower() == "stack")
                 {
                     Stack.methodStack(input);
                     command = Console.ReadLine();
                 }
-                else if (command == "Queue")
+                else if (command.ToLower() == "queue")
                 {
                     Queue.methodQueue(input);
                     command = Console.ReadLine();
@@ -29,7 +29,6 @@ namespace Advanced_course
                 {
                     Console.WriteLine("wrong command ! Choose between \"Stack\" or \"Queue\"");
                     command = Console.ReadLine();
-
                 }
             }
         }
